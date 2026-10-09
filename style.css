@@ -1,0 +1,28 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #000000;
+}
+
+#app {
+  width: 100%;
+  /* Track the *visible* viewport height. iOS Safari's 100vh is the
+     toolbar-hidden height (too tall), which clips the bottom of the canvas.
+     Cascade: 100vh fallback -> 100dvh (modern) -> --app-height (JS, set from
+     window.innerHeight for older iOS without dvh support). */
+  height: 100vh;
+  height: 100dvh;
+  height: var(--app-height);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#game-container {
+  width: 100%;
+  height: 100%;
+}
